@@ -44,14 +44,10 @@ export const App = () => {
         setIsLoadMore(true);
       }
       if (totalHits === 0) {
-        toast.warn(
-          `Sorry, there are no images matching your search query. Please try again.`
-        );
+        toast.warn(`Sorry, there are no images matching your search query. Please try again.`);
         setIsLoadMore(false);
       } else if (hits.length < PER_PAGE) {
-        toast.info(
-          'These are all the pictures what we found. Try something else'
-        );
+        toast.info('These are all the pictures what we found. Try something else');
         setIsLoadMore(false);
       }
     };
